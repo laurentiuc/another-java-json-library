@@ -1,0 +1,148 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.lci.ajjr</groupId>
+  <artifactId>aj-json-rpc</artifactId>
+  <version>0.0.2</version>
+  <packaging>jar</packaging>
+
+  <name>AJJR - Anothr Java JSON-RPC library</name>
+
+  <repositories>
+    <repository>
+      <id>java.net</id>
+      <url>http://download.java.net/maven/1</url>
+      <layout>legacy</layout>
+    </repository>
+    <repository>
+      <id>maven repo</id>
+      <name>maven repo</name>
+      <url>http://repo1.maven.org/maven2</url>
+    </repository>
+    <repository>
+      <id>jboss nexus repo</id>
+      <name>nexus repo</name>
+      <url>https://repository.jboss.org/nexus</url>
+    </repository>
+    <repository>
+      <id>jboss deprecated</id>
+      <name>jboss deprecated</name>
+      <url>https://repository.jboss.org/nexus/content/repositories/deprecated</url>
+    </repository>
+    <!-- For resteasy -->
+    <repository>
+      <id>jboss</id>
+      <name>jboss repo</name>
+      <url>http://repository.jboss.org/nexus/content/groups/public</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>daily</updatePolicy>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>jboss releases</id>
+      <name>jboss repo releases</name>
+      <url>http://repository.jboss.org/nexus/content/repositories/releases/jboss</url>
+    </repository>
+    <repository>
+      <id>scannotation</id>
+      <url>http://scannotation.sf.net/maven2</url>
+    </repository>
+    <repository>
+      <id>release</id>
+      <url>http://nexus-server/nexus/content/groups/public</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>snapshots</id>
+      <url>http://nexus-server/nexus/content/groups/public-snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>maven2-repository.dev.java.net</id>
+      <name>Java.net Repository for Maven</name>
+      <url>http://download.java.net/maven/2</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+  
+  <distributionManagement>
+    <repository>
+      <id>repo</id>
+      <url>file:../../../git@laurentiuc/mvn-repo/mvn-repository/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshot-repo</id>
+      <url>file:../../../git@laurentiuc/mvn-repo/mvn-repository/releases/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.15</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-core-asl</artifactId>
+      <version>1.9.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.9.6</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.scannotation</groupId>
+      <artifactId>scannotation</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss</groupId>
+      <artifactId>jboss-vfs</artifactId>
+      <version>3.1.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.enterprise</groupId>
+      <artifactId>cdi-api</artifactId>
+      <version>1.0-SP4</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+</project>
